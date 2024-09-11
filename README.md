@@ -1,3 +1,9 @@
+React プロジェクト
+
+HPサイトを１から作ってみようのプロジェクト
+
+2024/9/8に確認しているが、現状まだ触っていないみたい。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
