@@ -1,0 +1,20 @@
+@mixin common-font {
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between; /* 両端に配置 */
+    align-items: center; /* 垂直方向で中央に揃える */
+}
+
+.header-contactus {
+    @include common-font;
+    text-align: left;
+}
+
+.header-menu {
+    @include common-font;
+    text-align: right;
+}

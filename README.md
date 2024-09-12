@@ -4,6 +4,10 @@ HPサイトを１から作ってみようのプロジェクト
 
 2024/9/8に確認しているが、現状まだ触っていないみたい。
 
+シンプルかつ見やすいサイトにする。
+
+体験型のサイトは後々作る。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
