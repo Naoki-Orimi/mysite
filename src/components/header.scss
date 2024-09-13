@@ -1,9 +1,9 @@
 @mixin common-font {
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 30px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between; /* 両端に配置 */
     align-items: center; /* 垂直方向で中央に揃える */
@@ -17,4 +17,37 @@
 .header-menu {
     @include common-font;
     text-align: right;
+    background-color: white;
+    border: none;
 }
+
+
+// アニメーション設定
+// h1::before {
+//     transform: scaleX(0);
+//     transform-origin: bottom right;
+// }
+
+// h1:hover::before {
+//     transform: scaleX(1);
+//     transform-origin: bottom left;
+// }
+
+// h1::before {
+//     content: " ";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     inset: 0 0 0 0;
+//     background: hsl(200 100% 80%);
+//     z-index: -1;
+//     transition: transform 0.3s ease;
+// }
+
+// h1 {
+//     position: relative;
+//     font-size: 5rem;
+// }
