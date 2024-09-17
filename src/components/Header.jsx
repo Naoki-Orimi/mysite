@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './header.scss';
 
 const Header = () => {
@@ -27,8 +27,7 @@ const Header = () => {
     <div>
         <motion.div
           className='header'
-          initial={{ opacity: 1 }} // 初期状態でボタンは見える
-          exit={{ opacity: 0 }} // 要素が消える時の透明度を0にしてフェードアウトさせているが、そもそもボタン押下時にHeaderを非表示にしているため意味ない
+          initial={{ opacity: 1 }}
         >
           <div className='header-contactus'>Contact Us</div>
           <button
@@ -37,16 +36,16 @@ const Header = () => {
           >
             Menu
           </button>
-					{/* メニューモーダル */}
+				{/* メニューモーダル AnimatePresenceで、motion.divのexitアニメーションを適用させる*/}
+				<AnimatePresence>
 					{isopen && (
 						<motion.div
-							className='header-menu-list'
-							initial={{ opacity: 0, y: -100 }} // 初期状態（上からフェードイン）
+							className='header-menu-contents'
+							initial={{ opacity: 0, y: 0 }}   // 初期状態（ふわっと現れるように）
 							animate={{ opacity: 1, y: 0 }}   // フェードインして中央にスライド
-							exit={{ opacity: 0, y: 100 }}     // フェードアウトして下にスライド
-							transition={{ duration: 0.5 }}    // アニメーションの速さを指定
+							exit={{ opacity: 0, y: 100 }}    // Animateフェードアウトして下にスライド
+							transition={{ duration: 0.5 }}   // アニメーションの速さを指定
 						>
-							{/* <ul style={{ listStyle: 'none', padding: 50 }}> */}
 							<ul>
 								{menuList.map((menuItem, index) => (
 									<li key={index} style={{ marginBottom: '10px', fontSize: '20px' }}>
@@ -54,17 +53,18 @@ const Header = () => {
 									</li>
 								))}
 									<li>
-										<button 
+										<motion.button
+											className='header-menu-contents-back'
 											onClick={handleClickMenu}
 										>
 											Back
-										</button>
+										</motion.button>
 									</li>
 							</ul>
 						</motion.div>
 					)}
+				</AnimatePresence>
         </motion.div>
-
     </div>
   );
 }
