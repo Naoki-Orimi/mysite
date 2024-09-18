@@ -40,6 +40,7 @@
 }
 
 .header-menu-contents {
+    z-index: 1; // 画面上に来るようにする
     position: fixed;
     top: 100px;
     left: 10px;

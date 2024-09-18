@@ -24,18 +24,18 @@ const Header = () => {
 	};
 
 	return (
-    <div>
-        <motion.div
-          className='header'
-          initial={{ opacity: 1 }}
-        >
-          <div className='header-contactus'>Contact Us</div>
-          <button
-            className='header-menu'
-            onClick={handleClickMenu}
-          >
-            Menu
-          </button>
+		<div>
+			<motion.div
+				className='header'
+				initial={{ opacity: 1 }}
+			>
+				<div className='header-contactus'>Contact Us</div>
+				<button
+					className='header-menu'
+					onClick={handleClickMenu}
+				>
+					Menu
+				</button>
 				{/* メニューモーダル AnimatePresenceで、motion.divのexitアニメーションを適用させる*/}
 				<AnimatePresence>
 					{isopen && (
@@ -52,21 +52,21 @@ const Header = () => {
 										{menuItem}
 									</li>
 								))}
-									<li>
-										<motion.button
-											className='header-menu-contents-back'
-											onClick={handleClickMenu}
-										>
-											Back
-										</motion.button>
-									</li>
+								<li>
+									<motion.button
+										className='header-menu-contents-back'
+										onClick={handleClickMenu}
+									>
+										Back
+									</motion.button>
+								</li>
 							</ul>
 						</motion.div>
 					)}
 				</AnimatePresence>
-        </motion.div>
-    </div>
-  );
+			</motion.div>
+		</div>
+	);
 }
 
 export default Header;
