@@ -23,3 +23,5 @@ HPサイトを１から作ってみようのプロジェクト
   - 簡単なコンポーネントデザインを実装するため、デザインライブラリをプラグインしています。
   - https://mui.com/material-ui/all-components/
   
+⭐️TODO
+Tailwind CSS installして、グリッドシステムを実装した方がやりやすそう。

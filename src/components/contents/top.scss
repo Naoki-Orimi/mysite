@@ -1,17 +1,21 @@
 .top-img {
   position: relative;
-}
-
-.top-img img {
   width: 100%;
 }
 
+// imgの大きさをどうにかしたい
+.top-img img {
+  display: block;
+  margin: 0 40px;
+  width: calc(100% - 80px);
+}
+
 .top-img-text {
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   font-size: 40px;
   position: absolute;
   top: 80%;
   left: 5%;
   color: white;
   text-shadow: black 2px 5px;
-} 
+}

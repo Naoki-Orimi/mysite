@@ -4,7 +4,6 @@ import './index.css';
 import App from './App'; // app作成時のサンプルコンポーネント
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Top from './components/contents/Top';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +11,6 @@ root.render(
   <React.StrictMode>
     <Header />
     <Top />
-    <Footer />
   </React.StrictMode>
 );
 

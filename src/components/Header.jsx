@@ -43,8 +43,8 @@ const Header = () => {
 							className='header-menu-contents'
 							initial={{ opacity: 0, y: 0 }}   // 初期状態（ふわっと現れるように）
 							animate={{ opacity: 1, y: 0 }}   // フェードインして中央にスライド
-							exit={{ opacity: 0, y: 100 }}    // Animateフェードアウトして下にスライド
 							transition={{ duration: 0.5 }}   // アニメーションの速さを指定
+							exit={{ opacity: 0, y: 100 }}    // Animateフェードアウトして下にスライド
 						>
 							<ul>
 								{menuList.map((menuItem, index) => (
