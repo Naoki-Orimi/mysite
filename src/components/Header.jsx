@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import './header.scss';
 
 const Header = () => {
 	// メニューの状態
