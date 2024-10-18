@@ -5,6 +5,7 @@ import App from './App'; // app作成時のサンプルコンポーネント
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Top from './components/contents/Top';
+import './output.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
