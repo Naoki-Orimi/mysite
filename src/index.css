@@ -12,3 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div {
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
