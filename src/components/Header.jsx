@@ -24,7 +24,7 @@ const Header = () => {
 	};
 
 	return (
-	<div>
+	<nav>
 		<div className='header flex justify-between items-center px-10 py-5' initial={{ opacity: 1 }}>
 			<div className='
 				sm:text-[10px] md:text-[30px]
@@ -38,36 +38,31 @@ const Header = () => {
 					transform transition-transform hover:scale-110 duration-500'
 				onClick={handleClickMenu}
 			>
-				Menu
+				{isopen ? 'Close' : 'Menu'}
 			</button>
 		</div>
 	
-		{/* メニューモーダル AnimatePresenceで、motion.divのexitアニメーションを適用させる */}
+		{/* AnimatePresenceだとなぜかTailwindCSSが適応されない */}
 		<AnimatePresence>
 			{isopen && (
 				<motion.div
-					className='header-menu-contents'
+					className='header-menu-contents sm:text-[10px] md:text-[30px]'
 					initial={{ opacity: 0, y: 0 }}   // 初期状態（ふわっと現れるように）
 					animate={{ opacity: 1, y: 0 }}   // フェードインして中央にスライド
 					transition={{ duration: 0.5 }}   // アニメーションの速さを指定
-					exit={{ opacity: 0, y: 100 }}    // Animateフェードアウトして下にスライド
+					exit={{ opacity: 0, x: 100 }}    // Animateフェードアウトして下にスライド
 				>
-					<ul className='menu-list'>
+					<ul>
 						{menuList.map((menuItem, index) => (
 							<li key={index} className='mb-4 text-[20px]'>
 								{menuItem}
 							</li>
 						))}
-						<li>
-							<motion.button className='header-menu-contents-back' onClick={handleClickMenu}>
-								Back
-							</motion.button>
-						</li>
 					</ul>
 				</motion.div>
 			)}
 		</AnimatePresence>
-	</div>
+	</nav>
 	);
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './top.scss';
 
 const Top = () => {

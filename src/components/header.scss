@@ -40,14 +40,14 @@
 }
 
 .header-menu-contents {
-    z-index: 1; // 画面上に来るようにする
+    z-index: 1; /* 画面上に来るようにする */
     position: fixed;
     top: 100px;
-    left: 10px;
-    right: 10px;
-    width: calc(100% - 20px); // なぜか右寄せになるため、calcで設定
-    height: 50%;         /* 高さは画面の50% */
-    background: white;
+    // left: calc(100% - 20%);
+    padding-right: 20px;
+    width: calc(100%); /* なぜか右寄せになるため、calcで設定 */
+    height: 30%;         /* 高さは画面の50% */
+    background: linear-gradient(to top, #16c7de, white); /* 淡い青と白のグラデーション */
     border-radius: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box; /* paddingを含む計算 */
