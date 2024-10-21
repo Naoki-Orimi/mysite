@@ -1,5 +1,6 @@
 .top-img {
   position: relative;
+  height: 500px;
   width: 100%;
 }
 
@@ -8,6 +9,7 @@
   display: block;
   margin: 0 40px;
   width: calc(100% - 80px);
+  height: 100%;
 }
 
 .top-img-text {
